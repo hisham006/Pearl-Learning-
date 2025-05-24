@@ -3,7 +3,7 @@ from streamlit_drawable_canvas import st_canvas
 from keras.models import load_model
 from PIL import Image
 import numpy as np
-from utils.preprocess import preprocess_image
+from preprocess import preprocess_image
 from gtts import gTTS
 import tempfile
 import os
@@ -46,7 +46,7 @@ example_words = {
 }
 
 # --- Load model ---
-model = load_model("model/emnist_letters_finetuned.keras", compile=False)
+model = load_model("emnist_letters_finetuned.keras", compile=False)
 
 # --- Page config ---
 st.set_page_config(page_title="Alphabet Learner", layout="centered")
